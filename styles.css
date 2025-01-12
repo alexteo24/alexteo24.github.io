@@ -72,7 +72,7 @@ h1, h2, h3 {
     position: relative;
     align-content: center;
     padding: 2rem;
-    min-height: 250px;
+    min-height: 200px;
     border-radius: 8px;
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
@@ -92,12 +92,12 @@ h1, h2, h3 {
 .quote {
     margin: 0;
     padding-left: 1.5rem;
+}
 
-    p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-    }
+.quote p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .quote-author {
@@ -105,15 +105,13 @@ h1, h2, h3 {
     opacity: 0.8;
 }
 
-.personal-perspective {
-    .perspective-content {
-        background-color: #2a2d3a;
-        color: #ffffff;
-    }
+.personal-perspective .perspective-content {
+    background-color: #2a2d3a;
+    color: #ffffff;
+}
 
-    .quote-author {
-        color: #b8b9be;
-    }
+.personal-perspective .quote-author {
+    color: #b8b9be;
 }
 
 .perspective-carousel {
@@ -128,34 +126,32 @@ h1, h2, h3 {
 
 .perspective-item {
     flex: 0 0 100%;
-
-    quote-author {
-        color: #666;
-    }
-
-    .perspective-content {
-        background-color: #ffffff;
-        color: #2a2d3a;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
 }
 
-.carousel {
+.perspective-item .quote-author {
+    color: #666;
+}
+
+.perspective-item .perspective-content {
+    background-color: #ffffff;
+    color: #2a2d3a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.others-perspective.carousel {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
 }
 
-.others-perspective {
-    .perspective-content {
-        background-color: #e0e0e0;
-        color: #2a2d3a;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+.others-perspective .perspective-content {
+    background-color: #e0e0e0;
+    color: #2a2d3a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    .quote-author {
-        color: #030215;
-    }
+.others-perspective .quote-author {
+    color: #030215;
 }
 
 .perspective-controls {
@@ -208,30 +204,31 @@ h1, h2, h3 {
     padding: 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+}
 
-    h3 {
-        color: #1a202c;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-    }
+.derivative-card:hover,
+.derivative-card:focus-within {
+    transform: scale(1.05);
+    background-color: #e2e8f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
 
-    p {
-        color: #4a5568;
-        line-height: 1.6;
-        margin: 0;
-    }
+.derivative-card h3 {
+    color: #1a202c;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
 
-    &:hover, &:focus-within {
-        transform: scale(1.05);
-        background-color: #e2e8f0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    }
+.derivative-card p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0;
+}
 
-    &:focus-within {
-        outline: 3px solid #000000;
-        outline-offset: 2px;
-    }
+.derivative-card:focus-within {
+    outline: 3px solid #000000;
+    outline-offset: 2px;
 }
 
 @media (max-width: 768px) {
@@ -255,13 +252,13 @@ h1, h2, h3 {
     border-radius: 30px;
     color: #030215;
     text-decoration: none;
-
-    &:hover {
-
-        background-color: #373f48;
-        color: #ffffff;
-    }
 }
+
+.scroll-up:hover {
+    background-color: #373f48;
+    color: #ffffff;
+}
+
 
 .context-cards {
     display: flex;
@@ -277,31 +274,31 @@ h1, h2, h3 {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    img {
-        max-height: 300px;
-    }
+.context-card img {
+    max-height: 300px;
+}
 
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
+.context-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-    &:nth-of-type(even) {
-        flex-direction: row-reverse;
-    }
+.context-card:nth-of-type(even) {
+    flex-direction: row-reverse;
 }
 
 .context-image {
     flex: 1;
     min-height: 250px;
     overflow: hidden;
+}
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.context-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .context-content {
@@ -310,21 +307,19 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    h3 {
-        font-size: 1.5rem;
-        color: #2a2d3a;
-        margin-bottom: 1rem;
-    }
-
-    p {
-        font-size: 1rem;
-        color: #4a5568;
-        line-height: 1.6;
-    }
-
 }
 
+.context-content h3 {
+    font-size: 1.5rem;
+    color: #2a2d3a;
+    margin-bottom: 1rem;
+}
+
+.context-content p {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
 
 @media (max-width: 768px) {
     .context-card, .context-card:nth-of-type(even) {
@@ -337,13 +332,13 @@ h1, h2, h3 {
 
     .context-content {
         padding: 1.5rem;
+    }
 
-        h3 {
-            font-size: 1.3rem;
-        }
+    .context-content h3 {
+        font-size: 1.3rem;
+    }
 
-        p {
-            font-size: 0.9rem;
-        }
+    .context-content p {
+        font-size: 0.9rem;
     }
 }
