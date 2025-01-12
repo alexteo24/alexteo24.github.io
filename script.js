@@ -1,10 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
-    const navbar = document.querySelector('.navbar');
-    const backToTopBtn = document.querySelector('.back-to-top-btn');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
 
-    // Smooth scrolling for navigation links
+    navbarToggler.addEventListener('click', function() {
+        navbarCollapse.classList.toggle('show');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navbarCollapse.classList.remove('show');
+        });
+    });
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault()
@@ -15,8 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function handleScroll() {
-         // Update active navigation link
-        console.log('hit');
         let currentSection = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 100;
@@ -34,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     window.addEventListener('scroll', handleScroll);
 
-    // Derivative item expand/collapse functionality
     const derivativeItems = document.querySelectorAll('.derivative-item');
     derivativeItems.forEach(item => {
         const header = item.querySelector('.derivative-header');
@@ -82,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
             clearInterval(intervalId);
         }
 
-        // Event listeners
         nextBtn.addEventListener('click', () => {
             stopAutoRotation();
             nextSlide();
@@ -98,11 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
         container.addEventListener('mouseenter', stopAutoRotation);
         container.addEventListener('mouseleave', startAutoRotation);
 
-        // Initialize rotation
         startAutoRotation();
     }
 
-    // Initialize the carousel for other perspectives
     const othersCarousel = document.querySelector('.others-perspective.carousel');
     initializeCarousel(othersCarousel);
 });
