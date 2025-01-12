@@ -11,6 +11,7 @@ h1, h2, h3 {
 .home-container {
     position: relative;
     height: 70vh;
+    background-color: #4a5568;
     background-image: url('assets/identity.jpg');
     background-size: cover;
     background-position: center;
@@ -68,12 +69,10 @@ h1, h2, h3 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Perspectives Section Styles */
 .perspectives-section {
     padding: 4rem 0;
 }
 
-/* Common styles for all perspective cards */
 .perspective-content {
     position: relative;
     align-content: center;
@@ -84,7 +83,6 @@ h1, h2, h3 {
     transition: transform 0.3s ease;
 }
 
-/* Accent line common styles */
 .accent-line {
     position: absolute;
     left: 0;
@@ -96,7 +94,6 @@ h1, h2, h3 {
     border-bottom-left-radius: 8px;
 }
 
-/* Quote common styles */
 .quote {
     margin: 0;
     padding-left: 1.5rem;
@@ -159,10 +156,9 @@ h1, h2, h3 {
 }
 
 .others-perspective .quote-author {
-    color: #666;
+    color: #000000;
 }
 
-/* Controls */
 .perspective-controls {
     display: flex;
     justify-content: center;
@@ -189,7 +185,6 @@ h1, h2, h3 {
     color: #ffffff;
 }
 
-/* Hover effects */
 .perspective-content:hover {
     transform: translateY(-3px);
 }
@@ -236,7 +231,6 @@ h1, h2, h3 {
     margin: 0;
 }
 
-/* Add focus styles for keyboard navigation */
 .derivative-card:focus-within {
     outline: 3px solid #000000;
     outline-offset: 2px;
@@ -248,9 +242,6 @@ h1, h2, h3 {
         gap: 1rem;
     }
 }
-
-
-/* Scroll Indicator */
 
 .scroll-indicator {
     display: flex;
