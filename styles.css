@@ -11,7 +11,7 @@ h1, h2, h3 {
 .home-container {
     position: relative;
     height: 70vh;
-    background-image: url('identity.jpg');
+    background-image: url('assets/identity.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -113,8 +113,6 @@ h1, h2, h3 {
     opacity: 0.8;
 }
 
-/* Personal perspective specific styles */
-
 .personal-perspective .perspective-content {
     background-color: #2a2d3a;
     color: #ffffff;
@@ -124,7 +122,6 @@ h1, h2, h3 {
     color: #b8b9be;
 }
 
-/* Other perspectives styles */
 .perspective-carousel {
     position: relative;
     overflow: hidden;
@@ -153,15 +150,6 @@ h1, h2, h3 {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-}
-
-.perspective-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.perspective-item {
-    flex: 0 0 100%;
 }
 
 .others-perspective .perspective-content {
