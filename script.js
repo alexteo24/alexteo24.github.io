@@ -1,15 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('.navbar-collapse');
 
-    navbarToggler.addEventListener('click', function() {
+    navbarToggler.addEventListener('click', function () {
         navbarCollapse.classList.toggle('show');
     });
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             navbarCollapse.classList.remove('show');
         });
     });
@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
     window.addEventListener('scroll', handleScroll);
 
     const derivativeItems = document.querySelectorAll('.derivative-item');

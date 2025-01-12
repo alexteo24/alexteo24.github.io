@@ -92,6 +92,7 @@ h1, h2, h3 {
 .quote {
     margin: 0;
     padding-left: 1.5rem;
+
     p {
         font-size: 1.2rem;
         line-height: 1.6;
@@ -105,7 +106,7 @@ h1, h2, h3 {
 }
 
 .personal-perspective {
-    .perspective-content{
+    .perspective-content {
         background-color: #2a2d3a;
         color: #ffffff;
     }
@@ -127,9 +128,11 @@ h1, h2, h3 {
 
 .perspective-item {
     flex: 0 0 100%;
+
     quote-author {
         color: #666;
     }
+
     .perspective-content {
         background-color: #ffffff;
         color: #2a2d3a;
@@ -149,6 +152,7 @@ h1, h2, h3 {
         color: #2a2d3a;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
     .quote-author {
         color: #030215;
     }
@@ -223,6 +227,7 @@ h1, h2, h3 {
         background-color: #e2e8f0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
+
     &:focus-within {
         outline: 3px solid #000000;
         outline-offset: 2px;
@@ -242,6 +247,7 @@ h1, h2, h3 {
     margin-top: -30px;
     margin-bottom: 30px;
 }
+
 .scroll-up {
     height: 50px;
     padding: 10px 10px 0 10px;
@@ -310,6 +316,7 @@ h1, h2, h3 {
         color: #2a2d3a;
         margin-bottom: 1rem;
     }
+
     p {
         font-size: 1rem;
         color: #4a5568;
@@ -330,9 +337,11 @@ h1, h2, h3 {
 
     .context-content {
         padding: 1.5rem;
+
         h3 {
             font-size: 1.3rem;
         }
+
         p {
             font-size: 0.9rem;
         }
